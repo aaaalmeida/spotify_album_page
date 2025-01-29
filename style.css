@@ -1,0 +1,129 @@
+body {
+    background-color: #000;
+    font-family: 'Inter', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    width: 100%;
+    position: sticky;
+}
+
+header div {
+    display: flex;
+    gap: 10px;
+}
+
+header div i {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#musicSearch {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    padding: 10px;
+    background-color: #2e2d2d;
+}
+
+#homeButton {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #2e2d2d;
+}
+
+main {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+}
+
+nav {
+    height: inherit;
+    /* width: fit-content; */
+    background-color: #131212;
+    border-radius: 10px;
+    display: block;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav i {
+    color: white;
+    font-size: 30px;
+    padding: 4px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    height: calc(500px - 38px);
+    /* barra de rolagem invisivel */
+    scrollbar-width: none;
+}
+
+/* nav ul:hover {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2d2d transparent;
+} */
+
+nav ul li {
+    padding: 8px;
+}
+
+nav ul li img {
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+section {
+    height: inherit;
+    width: 93%;
+    border-radius: 10px;
+    scrollbar-width: none;
+    background-color: darkslategrey;
+}
+
+.playlistHeader {
+    display: flex;
+    padding: 30px 0 0 30px;
+    justify-content: start;
+    background-color: orange;
+}
+
+.playlistHeader img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.innerDetails {
+    padding: 0;
+    height: 200px;
+    padding-left: 10px;
+}
+
+.innerDetails h1 {
+    color: white;
+    font-size: 80px;
+}
+
+.innerDetails img {
+    width: 30px;
+    height: 30px;
+}
+
+.innerDetails div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
