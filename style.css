@@ -1,14 +1,22 @@
 body {
     background-color: #000;
     font-family: 'Inter', serif;
+    overflow: hidden;
+    /* position: relative; */
+    height: screen;
+    width: screen;
 }
+
+/* HEADER */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4em;
-    width: 100%;
+    height: fit-content;
+    width: screen;
+    padding-bottom: 10px;
+    padding-right: 6px;
     position: sticky;
 }
 
@@ -18,16 +26,30 @@ header div {
 }
 
 header div i {
-    color: #ffffff;
+    color: #a3a3a3;
     font-size: 1.5em;
+}
+
+#spotifyIcon {
+    padding-left: 20px;
+    color: white;
+    font-size: 2.5em;
 }
 
 #musicSearch {
     display: flex;
     border-radius: 20px;
     align-items: center;
-    padding: 10px;
+    padding: 12px;
     background-color: #2e2d2d;
+}
+
+#musicSearch input {
+    background-color: #2e2d2d;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    border-right: 1px solid #a3a3a3;
 }
 
 #homeButton {
@@ -36,11 +58,15 @@ header div i {
     background-color: #2e2d2d;
 }
 
+/* MAIN */
+
 main {
     display: flex;
     height: 500px;
     justify-content: space-between;
 }
+
+/* NAV SIDEBAR */
 
 nav {
     height: inherit;
@@ -55,9 +81,10 @@ nav {
 }
 
 nav i {
-    color: white;
+    color: #a3a3a3;
     font-size: 30px;
-    padding: 4px 0;
+    width: fit-content;
+    margin: 10px auto 0;
 }
 
 nav ul {
@@ -84,14 +111,21 @@ nav ul li img {
     border-radius: 5px;
 }
 
+/* MAIN SECTION */
+
 section {
     height: 450px;
-    width: 87%;
+    width: 90%;
+    margin-left: 8px;
     border-radius: 10px;
     scrollbar-width: none;
-    background-color: #131212;
+    overflow: auto;
+    /* background-color: #131212; */
+    background: linear-gradient(to bottom, #2e2d2d,#080808);
     padding: 30px;
 }
+
+/* PLAYLIST HEADER */
 
 .playlistHeader {
     display: flex;
@@ -173,12 +207,115 @@ section {
     color: #a3a3a3;
 }
 
+/* PLAYLIST */
+
 table {
     margin-top: 40px;
     color: #a3a3a3;
     width: 100%;
+    border-collapse: collapse;
 }
 
-table thead th{
+table th {
+    text-align: start;
+}
+
+table thead th {
     border-bottom: 2px solid #a3a3a3;
+}
+
+table tbody tr {
+    width: fit-content;
+    height: 40px;
+}
+
+table tbody tr:hover {
+    background-color: #2e2d2d;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 3.5em;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footerInfo {
+    display: flex;
+    justify-content: start;
+    padding-left: 24px;
+}
+
+#footerInfo img {
+    border-radius: 10px;
+    width: 55px;
+    height: 55px;
+}
+
+#footerInfo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+#footerInfo div h3 {
+    margin: 0;
+    color: white;
+    font-size: medium;
+}
+
+#footerInfo div h4 {
+    margin: 0;
+    color: #a3a3a3;
+    font-size: small;
+}
+
+#footerController {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#footerController span {
+    display: block;
+    height: 4px;
+    width: 250px;
+    background-color: #1ED760;
+    animation: progressBar 15s linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#footerController div {
+    color: #a3a3a3;
+    font-size: 1.5em;
+    align-content: center;
+}
+
+#footerButtons {
+    align-content: center;
+    font-size: 1.5em;
+    color: #a3a3a3;
+    padding-right: 25px;
+}
+
+#inputSound {
+    accent-color: #a3a3a3;
+    outline: none;
 }

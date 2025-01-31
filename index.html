@@ -17,10 +17,11 @@
 <body>
     <header>
         <div>
-            <i class="fa-brands fa-spotify"></i>
+            <i class="fa-brands fa-spotify" id="spotifyIcon"></i>
         </div>
         <div>
             <i class="fa-solid fa-house" id="homeButton"></i>
+            <label for=""></label>
             <div id="musicSearch">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="search" placeholder="What do you want to play?">
@@ -195,6 +196,36 @@
             </table>
         </section>
     </main>
+
+    <footer>
+        <div id="footerInfo">
+            <img src="assets/albumCover/Mac_Miller_GOOD_AM.png" alt="">
+            <div>
+                <h3>Jump</h3>
+                <h4>Mac Miller</h4>
+            </div>
+        </div>
+
+        <div id="footerController">
+            <div>
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-forward"></i>
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+            <span></span>
+        </div>
+
+        <div id="footerButtons">
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <input id='inputSound' type="range" min="0" value="100" max="100">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </div>
+    </footer>
 </body>
 
 </html>
